@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-homepage-query-tsx",
+    "path": "/",
+    "result": {"data":{"allPost":{"nodes":[{"slug":"/my-first-post","title":"My First Post","date":"25.03.2022","excerpt":"Hello My First Post","timeToRead":1,"description":"This is my first post.","tags":[{"name":"Test","slug":"test"}]}]}},"pageContext":{"formatString":"DD.MM.YYYY"}},
+    "staticQueryHashes": ["2744905544","3090400250","318001574"]}
