@@ -1,3 +1,4 @@
 User-agent: *
 
-sitemap: https://willy14620.github.io/sitemap.xml
+Sitemap: https://willy14620.github.io/sitemap/sitemap-index.xml
+Sitemap: https://willy14620.github.io/sitemap/sitemap-0.xml
