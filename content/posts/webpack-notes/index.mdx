@@ -1,0 +1,122 @@
+---
+title: Webpack 筆記：基本配置
+date: 2022-04-03
+description: 記錄使用 Webpack 工具的過程。
+defer: false
+tags:
+  - Webpack
+  - Note
+---
+
+export const ref = {
+  webpackGo: {
+    name: "Webpack 5 走起！ - 基本配置(2) - config",
+    url: "https://israynotarray.com/webpack/20210228/4075850339/",
+  },
+  webpackOfficial: {
+    name: "Webpack",
+    url: "https://webpack.js.org/",
+  },
+  cra: {
+    name: "CRA(Create React App)",
+    url: "https://create-react-app.dev/",
+  },
+  ithelp: {
+    name: "尋覓 webpack - 藉由 webpack 學習網頁前端工程的精妙之處 ",
+    url: "https://ithelp.ithome.com.tw/users/20107789/ironman/3332",
+  },
+};
+
+#### 前言
+
+最近想複習一下自己的前端技能，當然也包括了打包工具 <a href={ref.webpackOfficial.url} children={ref.webpackOfficial.name}/> 了，
+
+但因為之前在練習 React 的時候，都是通過 <a href={ref.cra.url} children={ref.cra.name}/> 來建立專案，
+
+反而很少從零開始建構起，所以也就漸漸忘記 Webpack 的配置要如何開始。
+
+因此想趁這次記錄自己使用 Webpack 的過程，之後如果有需要的話也能立即查看這篇文章來解決問題。
+
+---
+
+#### 安裝
+
+當然也是透過 Nodejs 來下載囉！
+
+```shell
+# Local
+npm i webpack webpack-cli -D
+
+# Global
+npm i webpack webpack-cli -g
+```
+
+---
+
+#### 基本配置
+
+我們在使用 Webpack 工具的時候，通常會先建立 `webpack.config.js` 的設定檔。
+
+如果沒有設定的話，它會使用 **Webpack 的預設參數** 來進行打包工作，詳情可以至 <a href={ref.webpackOfficial.url} children={ref.webpackOfficial.name}/> 的官網查看。
+
+而內容如下所示：
+
+```js
+// 引用 node 內建的 path 套件
+const path = require('path');
+
+module.exports = {
+  mode: 'development',
+  entry: path.resolve(__dirname, './src/main.js');
+  output: {
+    path: path.resolve(__dirname, './dist');
+    filename: '[name].[contenthash].bundle.js',
+  }
+}
+```
+
+首先，通常會透過 `__dirname` 及 `path.resolve()` 來取得絕對路徑，
+避免在其他作業系統環境發生無法預期的路徑錯誤。
+
+接著我們會透過 CommonJS 的規範來撰寫 Webpack 的配置。
+
+- `mode`：通常我們會分成**開發 (development)**及**部署 (production)**兩種環境。
+
+- `entry`：Webpack 解析程式的 **進入點**，預設是 `./src/index.js`，也可以同時有 **多個進入點**。
+
+- `output`：經 Webpack 解析後輸出 bundle 的目錄 (path)、檔案名稱 (filename)。
+
+其中，可以發現在 `filename` 的地方有 `[name]`、`[contenthash]` 兩個屬性：
+
+- `[name]`：會依據 `entry` 名稱來決定。
+
+- `[contenthash]`：依照 bundle 的內容去來產生 hash 值，當 bundle 改變時產生的 hash 值才會改變。
+
+使用 hash 的原因主要是為了避免瀏覽器緩存的問題，因為通常在開發的時候我們會大量的進行重新整理，
+而很有可能會造成緩存的問題、無法正確看到修改後的結果。
+
+而除了 `[contenthash]` 以外，你也可以使用下方其他 hash 的方式：
+
+- `[fullhash]`：基本的 hash 值，只要檔案有變化就會改變。
+
+- `[chunkhash]`：依照 chunk 的內容去來產生 hash 值，當 chunk 改變時產生的 hash 值才會改變。
+
+> Chunk 與 Bundle 同樣都是在指被 Webpack 所解析的程式，只是因不同的時間點有不同的稱呼，
+> Chunk 是在程式被 Webpack 解析中的名稱，而 Bundle 則是程式被 Webpack 解析後輸出檔案的名稱。
+
+修改完基本配置後，我們可以在 package.json 檔案中加入下列指令。
+
+```json
+scripts: {
+  "build": "npx webpack",
+}
+```
+
+並在終端機輸入 `npm run build` 就會開始進行打包，完成後可以在目錄 `dist` 看到打包完的檔案。
+
+---
+
+#### 參考文章
+
+1. <a href={ref.webpackGo.url} children={ref.webpackGo.name} />
+2. <a href={ref.ithelp.url} children={ref.ithelp.name} />
