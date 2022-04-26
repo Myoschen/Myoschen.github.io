@@ -6,7 +6,7 @@
   "author": "LekoArts <hello@lekoarts.de>",
   "license": "0BSD",
   "starter-name": "gatsby-starter-minimal-blog",
-  "homepage": "https://willy14620.github.io/",
+  "homepage": "https://myoschen.github.io/",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:willy14620/willy14620.github.io.git"
+    "url": "git@github.com:Myoschen/Myoschen.github.io.git"
   },
   "dependencies": {
     "@lekoarts/gatsby-theme-minimal-blog": "^4.0.0",

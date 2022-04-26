@@ -8,13 +8,13 @@ module.exports = {
     // You can also add new values here to query them like usual
     // See all options: https://github.com/LekoArts/gatsby-themes/blob/main/themes/gatsby-theme-minimal-blog/gatsby-config.js
     siteTitle: `Myos`,
-    siteTitleAlt: `Myos Blog - @willy14620`,
+    siteTitleAlt: `Myos Blog - @Myoschen`,
     siteHeadline: `Myos Blog`,
-    siteUrl: `https://willy14620.github.io/`,
-    siteDescription: `Hello, I'm Myos (willy14620). This is my personal blog.`,
+    siteUrl: `https://myoschen.github.io/`,
+    siteDescription: `Hello, I'm Myos (Myoschen). This is my personal blog.`,
     siteLanguage: `en`,
     siteImage: `/banner.png`,
-    author: `@willy14620`,
+    author: `@Myoschen`,
     siteVerification:`iO4nObidfK3yXH6sKeta4CgPucEGzI5hKDT7PYbu5Jc`
   },
   pathPrefix: `/`,
@@ -36,11 +36,11 @@ module.exports = {
         externalLinks: [
           {
             name: `Github`,
-            url: `https://github.com/willy14620`,
+            url: `https://github.com/Myoschen`,
           },
           {
             name: `Twitter`,
-            url: `https://twitter.com/willy14620`,
+            url: `https://twitter.com/Myoschen`,
           },
         ],
       },
@@ -68,7 +68,7 @@ module.exports = {
       options: {
         name: `Myos Blog`,
         short_name: `Myos`,
-        description: `Hello, I'm Myos (willy14620). This is my personal blog.`,
+        description: `Hello, I'm Myos (Myoschen). This is my personal blog.`,
         start_url: `/`,
         background_color: `#fff`,
         // This will impact how browsers show your PWA/website
