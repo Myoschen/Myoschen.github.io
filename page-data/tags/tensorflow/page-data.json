@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-tag-query-tsx",
-    "path": "/tags/tensorflow",
-    "result": {"data":{"allPost":{"nodes":[{"slug":"/用-anaconda-來建立-tensorflow-環境","title":"用 Anaconda 來建立 tensorflow 環境","date":"27.03.2022","excerpt":"前言 由於在這學期有修了 深度學習概論 的課程，會使用到   來實作。\n所以透過這篇文章來記錄筆者安裝的過程。 環境如下： Windows 11 家用版 Python：3.7.0 Tensorflow：2.3.…","timeToRead":1,"description":"使用 Anaconda 建立 tensorflow 的虛擬環境。","tags":[{"name":"Python","slug":"python"},{"name":"Anaconda","slug":"anaconda"},{"name":"Tensorflow","slug":"tensorflow"}]}]}},"pageContext":{"slug":"tensorflow","name":"Tensorflow","formatString":"DD.MM.YYYY"}},
-    "staticQueryHashes": ["2744905544","3090400250","3128008626"]}
